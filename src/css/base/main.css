@@ -1,0 +1,22 @@
+body {
+    background-color: var(--white);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.lang {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.lang__title {
+    margin-bottom: 20px;
+}
+
+.lang__link {
+    margin-bottom: 10px;
+}
