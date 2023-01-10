@@ -5,13 +5,13 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.footer__list {
+/* .footer__list {
 
-}
+} */
 
-.footer__nav {
+/* .footer__nav {
 
-}
+} */
 
 .footer__leselements {
     padding: 24px 0 30px 30px;
