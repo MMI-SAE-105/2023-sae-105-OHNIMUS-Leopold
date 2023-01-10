@@ -1,0 +1,31 @@
+.header {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    padding: 39px 18px 13px 22px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    filter: drop-shadow(var(--shadow));
+}
+
+.header__link {
+    display: contents;
+}
+
+.header__title {
+    font-family: var(--serif);
+    font-size: var(--logo);
+    font-weight: var(--medium);
+    color: var(--black);
+}
+
+.header__shop {
+    width: 23px;
+    float: right;
+    padding-left: 6px;
+}
+
+/* .header__menu {
+
+} */

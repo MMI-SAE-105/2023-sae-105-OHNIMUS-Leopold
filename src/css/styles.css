@@ -14,7 +14,8 @@
 @import "./base/media.css";
 
 /* Layout import */
-
+@import "./layout/header.css";
 
 /* Components import */
+@import "./components/menu.css";
 @import "./components/button.css"

@@ -9,7 +9,92 @@
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
 
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <a class="header__link" href="./index.html">
+            <p class="header__title">ACADEM'ART</p>
+        </a>
+        <a class="header__link" href="#">
+            <img class="header__shop" src="../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+        </a>
+
+
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen">
+                <img class="menu__icon" src="../public/icons/menu_black.svg" alt="ouvrir menu">
+            </button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-transition.duration.500ms>
+                
+                <div class="menu__header">
+                    <a class="menu__lang--link" href="#">
+                        <img class="menu__lang" src="../public/icons/globe.svg" alt="changer de langue">
+                    </a>
+                    <div class="menu__space" ></div>
+                    <a class="menu__shop--link" href="#">
+                        <img class="menu__shop" src="../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+                    </a>
+                    <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen">
+                        <img class="menu__close" src="../public/icons/cross_black.svg" alt="fermer menu">
+                    </button>
+                </div>
+
+                <div class="menu__list">
+                    <nav class="menu__nav">
+                        <ul class="menu__leselements">
+                            <a class="menu__link" href="#">
+                                <li class="menu__element">
+                                    Acheter une entrée
+                                </li>
+                            </a>
+                            <hr class="menu__separator">
+                            <a class="menu__link" href="./lesartistes.html">
+                                <li class="menu__element">
+                                    Les artistes mis à l'honneur
+                                </li>
+                            </a>
+                            <hr class="menu__separator">
+                            <a class="menu__link" href="./lesoeuvres.html">
+                                <li class="menu__element">
+                                    Les œuvres majeures de l'exposition
+                                    et leur chronologie
+                                </li>
+                            </a>
+                            <hr class="menu__separator">
+                            <a class="menu__link" href="./about.html">
+                                <li class="menu__element">
+                                    À propos de l'exposition
+                                </li>
+                            </a>
+                            <hr class="menu__separator">
+                            <a class="menu__link" href="./contact.html">
+                                <li class="menu__element">
+                                    Informations pratiques / Contact
+                                </li>
+                            </a>
+                            <hr class="menu__separator">
+                            <a class="menu__link" href="./fondation.html">
+                                <li class="menu__element">
+                                    La Fondation Cartier
+                                </li>
+                            </a>
+                        </ul>
+                    </nav>
+
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
