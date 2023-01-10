@@ -1,0 +1,19 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Quicksand:wght@400;600&display=swap');
+
+
+/* Libraries import */
+@import "./libraries/normalize.css";
+
+/* Utils import */
+@import "./utils/variables.css";
+@import "./utils/headings.css";
+
+/* Styles import */
+@import "./base/main.css";
+@import "./base/media.css";
+
+/* Layout import */
+
+
+/* Components import */
