@@ -20,3 +20,29 @@ html {
 .lang__link {
     margin-bottom: 10px;
 }
+
+.page {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.page__title {
+    text-align: center;
+}
+
+.page__line {
+    content: '';
+    height: 2px;
+    width: 29%;
+    display: flex;
+    margin: 12px auto 26px auto;
+    background-color: var(--black);
+}
+
+.page__text {
+    margin: 20px 20px 0 20px;
+}
+
+.page__link {
+    text-align: center;
+}

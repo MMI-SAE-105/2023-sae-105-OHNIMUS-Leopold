@@ -19,7 +19,8 @@
 }
 
 .footer__link {
-    display: contents;
+    text-decoration: none;
+    color: var(--white);
 }
 
 .footer__element {
