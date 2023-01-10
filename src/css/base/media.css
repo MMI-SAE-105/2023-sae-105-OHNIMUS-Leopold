@@ -1,0 +1,18 @@
+.cover {
+    margin: 0 20px 30px 20px;
+}
+
+.cover__img {
+    width: 100%;
+    max-width: 750px;
+}
+
+.cover__caption {
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--black);
+    margin: 0;
+    margin-top: 5px;
+    text-align: center;
+}
