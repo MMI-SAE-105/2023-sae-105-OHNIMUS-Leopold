@@ -1,0 +1,57 @@
+/* Définition des styles typographiques et mise à zéro des marges */
+
+h1 {
+    font-family: var(--serif);
+    font-size: var(--h1);
+    font-weight: var(--regular);
+    color: var(--black);
+    margin: 0;
+}
+
+h2 {
+    font-family: var(--serif);
+    font-size: var(--h2);
+    font-weight: var(--regular);
+    color: var(--black);
+    margin: 0;
+}
+
+h3 {
+    font-family: var(--serif);
+    font-size: var(--h3);
+    font-weight: var(--regular);
+    color: var(--black);
+    margin: 0;
+}
+
+p {
+    font-family: var(--sans-serif);
+    font-size: var(--body);
+    font-weight: var(--regular);
+    color: var(--black);
+    margin: 0;
+}
+
+/* .small-text {
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--black);
+    margin: 0;
+}
+
+.button {
+    font-family: var(--sans-serif);
+    font-size: var(--button);
+    font-weight: var(--semi-bold);
+    color: var(--black);
+    margin: 0;
+} */
+
+/* .logo {
+    font-family: var(--serif);
+    font-size: var(--logo);
+    font-weight: var(--medium);
+    color: var(--black);
+    margin: 0;    
+*/
