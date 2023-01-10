@@ -9,6 +9,7 @@
 .menu__icon {
     width: 44px;
     cursor: pointer;
+    margin-left: -18px;
 }
 
 .menu__open {
@@ -24,29 +25,39 @@
 }
 
 .menu__header {
-    display: flex;
-    /* justify-content: center; */
-    place-content: space-between;
+    /* display: flex;
+    justify-content: center;
+    place-content: center;
+    align-items: center; */
+    display: grid;
     align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     padding-top: 38px;
-    padding-left: 25px;
-    padding-right: 25px;
+}
+
+.menu__sec1 {
+    grid-column: span 1 / span 1;
+}
+
+.menu__sec2 {
+    grid-column: span 2 / span 2;
+    display: flex;
+    justify-self: end;
+    align-items: center;
 }
 
 .menu__lang {
     width: 26px;
     margin-top: 10px;
-    margin-left: 0px;
+    
 }
 
 /* .menu__lang--link {
 
 } */
 
-.menu__space {
-    content: '';
-    width: 58%;
-}
+
 
 .menu__shop {
     width: 23px;
@@ -60,8 +71,8 @@
 .menu__close {
     cursor: pointer;
     width: 44px;
-    float: right;
-    margin-right: 0px;
+    /* float: right; */
+    margin-right: 20px;
     margin-left: 10px;
 }
 

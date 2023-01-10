@@ -1,8 +1,8 @@
 .header {
     background-color: var(--light-gray);
     display: flex;
-    justify-content: space-between;
-    padding: 39px 18px 13px 22px;
+    justify-content: space-around;
+    padding: 39px 0 13px 0;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -23,12 +23,12 @@
     font-size: var(--logo);
     font-weight: var(--medium);
     color: var(--black);
+    margin-right: -22px;
 }
 
 .header__shop {
     width: 23px;
     float: right;
-    padding-left: 6px;
 }
 
 /* .header__menu {
