@@ -10,6 +10,11 @@
 }
 
 .header__link {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.header__link--img {
     display: contents;
 }
 

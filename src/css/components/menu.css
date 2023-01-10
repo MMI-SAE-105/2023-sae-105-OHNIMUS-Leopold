@@ -102,5 +102,6 @@
 }
 
 .menu__link {
-    display: contents;
+    color: var(--black);
+    text-decoration: none;
 }
