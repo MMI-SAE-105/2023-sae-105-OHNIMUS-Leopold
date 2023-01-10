@@ -43,6 +43,15 @@ html {
     margin: 20px 20px 0 20px;
 }
 
-.page__link {
+.page__other {
+    margin: 40px 20px 20px 20px;
     text-align: center;
+}
+
+/* .page__other--txt {
+    
+} */
+
+.page__other--link {
+    margin: 20px 20px 0 20px;
 }
