@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.noscroll {
+    overflow: hidden;
+}
+
 .lang {
     display: flex;
     flex-direction: column;
