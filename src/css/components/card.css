@@ -1,0 +1,34 @@
+.card {
+    margin-right: 59px;
+    scroll-snap-align: center;
+}
+
+.card__img {
+    /* width: 69vw; */
+    width: 259px;
+    max-width: 518px;
+}
+
+/* .card__caption {
+
+} */
+
+.caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--black);
+}
+
+.caption__text {
+    margin-top: 4px;
+}
+
+.caption__link {
+    margin-top: 7px;
+    margin-left: 11px;
+}
+
+/* .caption__icon {
+
+} */

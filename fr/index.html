@@ -95,11 +95,107 @@
     </header>
 
     <main class="page">
-        <h1 class="page__title">
-            Bienvenue
-        </h1>
-        <div class="page__line"></div>
+        <section class="page__section page__section--center">
+            <h1 class="page__title">
+                Bienvenue
+            </h1>
+            <div class="page__line"></div>
+            <p class="page__text">
+                Academ'Art est une exposition mettant en 
+                scène divers artistes appartenant au mouvement 
+                de l'art académique.
+            </p>
+            <p class="page__text">
+                Ce sont leurs œuvres majeures qui y sont 
+                représentées dans les splendides locaux de la 
+                Fondation Cartier.
+            </p>
+        </section>
 
+        <div class="artistes">
+            <h1 class="artistes__title">Les artistes</h1>
+            <div class="page__line"></div>
+            <div class="artistes__carrousel carrousel" x-data="{hrefCourant: '#card-1',}">
+                <button aria-label="previousSlide" class="carrousel__button carrousel__button--prv">
+                    <img @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/chevron-left.svg" alt="artiste précédent">
+                </button>
+                <button aria-label="nextSlide" class="carrousel__button carrousel__button--nxt">
+                    <img @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel__button--img" src="../public/icons/chevron-right.svg" alt="artiste suivant">
+                </button>
+        
+                <div class="carrousel__track" x-ref="parent" @scroll.debounce.50ms.passive="
+                hrefCourant = '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+                    
+                    <div id="card-1" class="carrousel__card card">
+                        <img class="card__img" src="../public/img/artistes/camuccini-2.webp" alt="Vincenzo Camuccini">
+                        <div class="card__caption caption">
+                            <p class="caption__text">Vincenzo Camuccini</p>
+                            <a class="caption__link" href="./artists/camuccini.html">
+                                <img class="caption__icon" src="../public/icons/arrow-right.svg" alt="voir l'artiste">
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div id="card-2" class="carrousel__card card">
+                        <img class="card__img" src="../public/img/artistes/charles-martin-powell.webp" alt="Charles Martin Powell">
+                        <div class="card__caption caption">
+                            <p class="caption__text">Charles Martin Powell</p>
+                            <a class="caption__link" href="./artists/martinpowell.html">
+                                <img class="caption__icon" src="../public/icons/arrow-right.svg" alt="voir l'artiste">
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div id="card-3" class="carrousel__card card">
+                        <img class="card__img" src="../public/img/artistes/charles-philippe-lariviere.webp" alt="Charles-Philippe Larivière">
+                        <div class="card__caption caption">
+                            <p class="caption__text">Charles-Philippe Larivière</p>
+                            <a class="caption__link" href="./artists/lariviere.html">
+                                <img class="caption__icon" src="../public/icons/arrow-right.svg" alt="voir l'artiste">
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div id="card-4" class="carrousel__card card">
+                        <img class="card__img" src="../public/img/artistes/delarocheportrait.webp" alt="Paul Delaroche">
+                        <div class="card__caption caption">
+                            <p class="caption__text">Paul Delaroche</p>
+                            <a class="caption__link" href="./artists/delaroche.html">
+                                <img class="caption__icon" src="../public/icons/arrow-right.svg" alt="voir l'artiste">
+                            </a>
+                        </div>
+                    </div>
+        
+                    
+                </div>
+                <div class="carrousel__dots">
+                    <a aria-label="artiste-1" href="#card-1" class="carrousel__navigate">
+                        <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-1'}"></span>
+                    </a>
+                    <a aria-label="artiste-2" href="#card-2" class="carrousel__navigate">
+                        <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-2'}"></span>
+                    </a>
+                    <a aria-label="artiste-3" href="#card-3" class="carrousel__navigate">
+                        <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-3'}"></span>
+                    </a>
+                    <a aria-label="artiste-4" href="#card-4" class="carrousel__navigate">
+                        <span class="carrousel__dot" :class="{dotactif:hrefCourant==='#card-4'}"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="page__other">
+            <p class="page__other--txt">
+                Pour découvrir les œuvres majeures présentes 
+                dans l'exposition, cliquez ici ! 
+            </p>
+            <p class="page__other--link">
+                <a class="page__button button button--black" href="./lesoeuvres.html">
+                    Découvrir les oeuvres
+                </a>
+            </p>
+        </div>
     </main>
 
     <footer class="footer">

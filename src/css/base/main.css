@@ -63,3 +63,23 @@ html {
 /* .page__cover {
 
 } */
+
+.page__section {
+    margin-bottom: 30px;
+}
+
+.page__section--center {
+    text-align: center;
+}
+
+/* .artistes {
+
+} */
+
+.artistes__title {
+    text-align: center;
+}
+
+/* .artistes__carrousel {
+
+} */
