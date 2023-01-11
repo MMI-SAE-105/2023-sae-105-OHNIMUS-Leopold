@@ -16,6 +16,7 @@
 /* Layout import */
 @import "./layout/header.css";
 @import "./layout/footer.css";
+@import "./layout/frise.css";
 
 /* Components import */
 @import "./components/menu.css";
