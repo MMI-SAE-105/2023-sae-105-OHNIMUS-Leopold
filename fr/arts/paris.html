@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pâris</title>
+    <link rel="stylesheet" href="../../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <p class="header__title">
+            <a class="header__link" href="./../index.html">
+                ACADEM'ART
+            </a>
+        </p>
+        <a class="header__link--img" href="#">
+            <img class="header__shop" src="../../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+        </a>
+
+
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen">
+                <img class="menu__icon" src="../../public/icons/menu_black.svg" alt="ouvrir menu">
+            </button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-transition.duration.500ms>
+                
+                <div class="menu__header">
+                    <div class="menu__sec1">
+                        <a class="menu__lang--link" href="#">
+                            <img class="menu__lang" src="../../public/icons/globe.svg" alt="changer de langue">
+                        </a>
+                    </div>
+                    <div class="menu__sec2">
+                        <a class="menu__shop--link" href="#">
+                            <img class="menu__shop" src="../../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+                        </a>
+                        <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen">
+                            <img class="menu__close" src="../../public/icons/cross_black.svg" alt="fermer menu">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu__list">
+                    <nav class="menu__nav">
+                        <ul class="menu__leselements">
+                            <li class="menu__element">
+                                <a class="menu__link" href="#">
+                                    Acheter une entrée
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../lesartistes.html">
+                                    Les artistes mis à l'honneur
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../lesoeuvres.html">
+                                    Les œuvres majeures de l'exposition
+                                    et leur chronologie
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../about.html">
+                                    À propos de l'exposition
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../contact.html">
+                                    Informations pratiques / Contact
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../fondation.html">
+                                    La Fondation Cartier
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="fiche fiche--art art">
+        <article class="art__article">
+            
+            <div>
+                <h1 class="art__title">
+                    Pâris
+                </h1>
+                <div class="page__line"></div>
+                <img class="art__img" src="../../public/img/oeuvres/paris.webp" alt="Pâris">
+                <p class="art__text">
+                    "La Mort de César" est une peinture à l'huile sur 
+                    toile réalisée par Vincenzo Camuccini en 1804. La 
+                    peinture a été commandée par le roi Ferdinand IV 
+                    de Naples et a été exposée au Museo di Capodimonte 
+                    à Naples. 
+                    <br><br>
+                    Elle représente le moment où Jules César est 
+                    assassiné par un groupe de conjurés lors de sa 
+                    dernière apparition au Sénat de Rome. 
+                    <br>
+                    La scène est inspirée de la célèbre scène de 
+                    l'assassinat de César décrite par l'historien 
+                    romain Suétone dans ses "Vies des douze Césars". 
+                    <br><br>
+                    Elle est considérée comme l'une des œuvres les plus 
+                    importantes de Camuccini et a eu une grande influence 
+                    sur la peinture historique italienne de l'époque.
+                </p>
+
+                <div class="page__other">
+                    <p class="page__other--txt">
+                        Pour en savoir plus sur Vincenzo Camuccini,
+                        cliquez ici ! 
+                    </p>
+                    <p class="page__other--link">
+                        <a class="page__button button button--black" href="../artists/camuccini.html">
+                            Voir l'artiste
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer__list">
+            <nav class="footer__nav">
+                <ul class="footer__leselements">
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../about.html">
+                            À propos de l'exposition
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../contact.html">
+                            Informations pratiques
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../fondation.html">
+                            La Fondation Cartier
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__side">
+            <div class="footer__button button button--footer">
+                <a class="footer__link" href="#">
+                    Achetez votre<br>ticket
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
