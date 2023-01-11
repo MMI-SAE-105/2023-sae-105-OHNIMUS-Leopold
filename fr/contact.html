@@ -160,26 +160,29 @@
                 </ul>
             </nav>
         </div>
-        
 
+        <h2 class="page__subtitle">
+            Nous contacter
+        </h2>
 
-
-
-        <h3>
-            Tarifs
-        </h3>
-        <ul x-data="{
-            async donnees() {
-                const resp = await fetch('../src/json/data.json');
-                return await resp.json();
-            },
-        }">
-            <template x-for="obj in donnees">
-                <li>
-                    <p x-text="obj.tarif">tarif</p>
-                    <p x-text="obj.prix">prix</p>
-                </li>
-            </template>
+        <form class="page__form form">
+            <h3 class="form__title">Formulaire de contact</h3>
+            <div class="form__grid">
+                <div class="form__col form__col--1">
+                    <label class="form__label text__orange" for="first-name">Prénom</label>
+                    <input class="form__text" type="text" name="first-name" id="first-name" placeholder="Votre prénom">
+                </div>
+                <div class="form__col form__col--2">
+                    <label class="form__label text__orange" for="last-name">Nom</label>
+                    <input class="form__text" type="text" name="last-name" id="last-name" placeholder="Votre nom">
+                </div>
+            </div>
+            <label class="form__label text__orange" for="email">Adresse mail</label>
+            <input class="form__text" type="email" name="email" id="email" placeholder="Votre adresse mail">
+            <label class="form__label text__orange" for="message">Message</label>
+            <textarea class="form__textarea" name="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+            <button class="form__button button button--orange" type="submit">Envoyer</button>
+        </form>
 
 
     </main>

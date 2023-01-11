@@ -150,13 +150,13 @@ html {
 
 /* .tarifs {
 
-}
+} */
 
 .tarifs__title {
-
+    margin-left: 20px;
 }
 
-.tarifs__nav {
+/* .tarifs__nav {
 
 } */
 
@@ -176,3 +176,71 @@ html {
 /* .tarifs__text {
 
 } */
+
+/* .page__form {
+
+} */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px 20px 20px;
+    
+}
+
+.form__title {
+    text-align: center;
+    margin: 26px 0px 20px 0px;
+}
+
+.form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form__col {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__col--1 {
+    margin-right: 20px;
+}
+
+.form__col--2 {
+    margin-left: 20px;
+}
+
+.form__label {
+    margin-bottom: 5px;
+    margin-top: 14px;
+}
+
+.form__text {
+    width: 100%;
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--black);
+    border: 1px solid var(--black);
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    filter: drop-shadow(var(--shadow));
+}
+
+.form__textarea {
+    width: 100%;
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--black);
+    border: 1px solid var(--black);
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    filter: drop-shadow(var(--shadow));
+}
+
+.form__button {
+    margin: auto;
+    margin-top: 20px;
+}
