@@ -69,4 +69,5 @@
     width: 100%;
     max-width: 100px;
     /* border: 2px solid var(--black); */
+    filter: drop-shadow(var(--shadow));
 }
