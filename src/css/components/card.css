@@ -21,7 +21,8 @@
 }
 
 .caption__text {
-    margin-top: 4px;
+    /* margin-top: 4px; */
+    margin-bottom: 1px;
 }
 
 .caption__link {
