@@ -17,6 +17,8 @@
 @import "./layout/header.css";
 @import "./layout/footer.css";
 @import "./layout/frise.css";
+@import "./layout/artiste.css";
+@import "./layout/art.css";
 
 /* Components import */
 @import "./components/menu.css";
