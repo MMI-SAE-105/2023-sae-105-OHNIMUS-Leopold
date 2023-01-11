@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Martin Powell</title>
+    <link rel="stylesheet" href="../../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <p class="header__title">
+            <a class="header__link" href="./../index.html">
+                ACADEM'ART
+            </a>
+        </p>
+        <a class="header__link--img" href="#">
+            <img class="header__shop" src="../../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+        </a>
+
+
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen">
+                <img class="menu__icon" src="../../public/icons/menu_black.svg" alt="ouvrir menu">
+            </button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-transition.duration.500ms>
+                
+                <div class="menu__header">
+                    <div class="menu__sec1">
+                        <a class="menu__lang--link" href="#">
+                            <img class="menu__lang" src="../../public/icons/globe.svg" alt="changer de langue">
+                        </a>
+                    </div>
+                    <div class="menu__sec2">
+                        <a class="menu__shop--link" href="#">
+                            <img class="menu__shop" src="../../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+                        </a>
+                        <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen">
+                            <img class="menu__close" src="../../public/icons/cross_black.svg" alt="fermer menu">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu__list">
+                    <nav class="menu__nav">
+                        <ul class="menu__leselements">
+                            <li class="menu__element">
+                                <a class="menu__link" href="#">
+                                    Acheter une entrée
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../lesartistes.html">
+                                    Les artistes mis à l'honneur
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../lesoeuvres.html">
+                                    Les œuvres majeures de l'exposition
+                                    et leur chronologie
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../about.html">
+                                    À propos de l'exposition
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../contact.html">
+                                    Informations pratiques / Contact
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../fondation.html">
+                                    La Fondation Cartier
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="fiche fiche--artiste artiste">
+        <article class="artiste__article">
+            
+            <div class="artiste__part artiste__part--1">
+                <h1 class="artiste__title">
+                    Charles Martin Powell
+                </h1>
+                <div class="artiste__line"></div>
+                <h2 class="artiste__subtitle">
+                    Sa vie
+                </h2>
+                <h3 class="artiste__subsubtitle">
+                    Introduction
+                </h3>
+                <div class="artiste__grille">
+                    <p class="artiste__text">
+                        On ne connait rien de lui, mais il faisait de jolis bateaux !
+                    </p>
+                    <figure class="artiste__face">
+                        <img class="artiste__img artiste__img--face" src="./../../public/img/artistes/charles-martin-powell.webp" alt="Charles Martin Powell">
+                        <figcaption class="artiste__caption">
+                            Charles Martin Powell
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="artiste__part artiste__part--2">
+                <h2 class="artiste__subtitle">
+                    Ses œuvres exposées
+                </h2>
+
+                <figure class="artiste__art">
+                    <img class="artiste__img artiste__img--art" src="../../public/img/oeuvres/charles-martin-powell-a-morning-calm.webp" alt="A morning calm">
+                    <div class="artiste__sub">
+                        <figcaption class="artiste__caption">
+                            A morning calm
+                        </figcaption>
+                        <a class="artiste__link" href="../arts/amorningcalm.html">
+                            <img class="artiste__icon" src="../../public/icons/arrow-right.svg" alt="aller à l'oeuvre">
+                        </a>
+                    </div>
+                </figure>
+
+                <figure class="artiste__art">
+                    <img class="artiste__img artiste__img--art" src="../../public/img/oeuvres/shipping-in-the-downs.webp" alt="Shipping in the Downs">
+                    <div class="artiste__sub">
+                        <figcaption class="artiste__caption">
+                            Shipping in the Downs
+                        </figcaption>
+                        <a class="artiste__link" href="../arts/shippinginthedowns.html">
+                            <img class="artiste__icon" src="../../public/icons/arrow-right.svg" alt="aller à l'oeuvre">
+                        </a>
+                    </div>
+                </figure>
+            </div>
+            
+        </article>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer__list">
+            <nav class="footer__nav">
+                <ul class="footer__leselements">
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../about.html">
+                            À propos de l'exposition
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../contact.html">
+                            Informations pratiques
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../fondation.html">
+                            La Fondation Cartier
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__side">
+            <div class="footer__button button button--footer">
+                <a class="footer__link" href="#">
+                    Achetez votre<br>ticket
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information pratiques / Contact</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <p class="header__title">
+            <a class="header__link" href="./index.html">
+                ACADEM'ART
+            </a>
+        </p>
+        <a class="header__link--img" href="#">
+            <img class="header__shop" src="../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+        </a>
+
+
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen">
+                <img class="menu__icon" src="../public/icons/menu_black.svg" alt="ouvrir menu">
+            </button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-transition.duration.500ms>
+                
+                <div class="menu__header">
+                    <div class="menu__sec1">
+                        <a class="menu__lang--link" href="#">
+                            <img class="menu__lang" src="../public/icons/globe.svg" alt="changer de langue">
+                        </a>
+                    </div>
+                    <div class="menu__sec2">
+                        <a class="menu__shop--link" href="#">
+                            <img class="menu__shop" src="../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+                        </a>
+                        <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen">
+                            <img class="menu__close" src="../public/icons/cross_black.svg" alt="fermer menu">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu__list">
+                    <nav class="menu__nav">
+                        <ul class="menu__leselements">
+                            <li class="menu__element">
+                                <a class="menu__link" href="#">
+                                    Acheter une entrée
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./lesartistes.html">
+                                    Les artistes mis à l'honneur
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./lesoeuvres.html">
+                                    Les œuvres majeures de l'exposition
+                                    et leur chronologie
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./about.html">
+                                    À propos de l'exposition
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./contact.html">
+                                    Informations pratiques / Contact
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./fondation.html">
+                                    La Fondation Cartier
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1 class="page__title">
+            Informations pratiques
+        </h1>
+        <div class="page__line"></div>
+        <h2 class="page__subtitle">
+            Se rendre à l'exposition
+        </h2>
+        <iframe class="page__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.0966455014363!2d2.3293401761273005!3d48.837295202191235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671c80c12b47d%3A0x225ddbf564cf5d5a!2sFondation%20Cartier%20pour%20l&#39;art%20contemporain!5e0!3m2!1sfr!2sfr!4v1673440577908!5m2!1sfr!2sfr" width="280" height="190" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <div class="page__grid">
+            <div class="page__grid--col col col--1">
+                <h3 class="page__subsubtitle">
+                    Dates
+                </h3>
+                <p class="page__text page__text--grid">
+                    Du <strong class="text__orange">13 avril</strong> au <strong class="text__orange">23 juin 2021.</strong>
+                </p>
+            </div>
+            <div class="page__grid--col col col--2">
+                <h3 class="page__subsubtitle">
+                    Lieu
+                </h3>
+                <p class="page__text page__text--grid">
+                    <strong class="text__orange">Fondation Cartier</strong>, 261 Bd Raspail, 75014 Paris.
+                </p>
+            </div>
+
+
+
+            <div class="page__grid--col col col--2">
+                <h3 class="page__subsubtitle">
+                    Horaires
+                </h3>
+                <p class="page__text page__text--grid">
+                    <strong class="text__orange">Tous les jours</strong> de <strong class="text__orange">11h à 20h</strong>, sauf le lundi. 
+                </p>
+            </div>
+            <div class="page__grid--col col col--2">
+                <p class="page__text page__text--grid">
+                    <br>
+                    <strong class="text__orange">Nocturne le mardi</strong>, jusqu'à 22h.
+                </p>
+            </div>
+        </div>
+
+        <div class="page__tarifs tarifs">
+            <h3 class="tarifs__title">
+                Tarifs
+            </h3>
+            <nav class="tarifs__nav">
+                <ul class="tarifs__ul" x-data="{
+                    async donnees() {
+                        const resp = await fetch('../src/json/data.json');
+                        return await resp.json();
+                    },
+                }">
+                    <template x-for="obj in donnees">
+                        <li class="tarifs__li">
+                            <p class="tarifs__text" x-text="obj.tarif"></p>
+                            <p class="tarifs__text text__orange" x-text="obj.prix"></p>
+                        </li>
+                    </template>
+                </ul>
+            </nav>
+        </div>
+
+        <h2 class="page__subtitle">
+            Nous contacter
+        </h2>
+
+        <form class="page__form form">
+            <h3 class="form__title">Formulaire de contact</h3>
+            <div class="form__grid">
+                <div class="form__col form__col--1">
+                    <label class="form__label text__orange" for="first-name">Prénom</label>
+                    <input class="form__text" type="text" name="first-name" id="first-name" placeholder="Votre prénom">
+                </div>
+                <div class="form__col form__col--2">
+                    <label class="form__label text__orange" for="last-name">Nom</label>
+                    <input class="form__text" type="text" name="last-name" id="last-name" placeholder="Votre nom">
+                </div>
+            </div>
+            <label class="form__label text__orange" for="email">Adresse mail</label>
+            <input class="form__text" type="email" name="email" id="email" placeholder="Votre adresse mail">
+            <label class="form__label text__orange" for="message">Message</label>
+            <textarea class="form__textarea" name="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+            <button class="form__button button button--orange" type="submit">Envoyer</button>
+        </form>
+
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer__list">
+            <nav class="footer__nav">
+                <ul class="footer__leselements">
+                    <li class="footer__element">
+                        <a class="footer__link" href="./about.html">
+                            À propos de l'exposition
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./contact.html">
+                            Informations pratiques
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./fondation.html">
+                            La Fondation Cartier
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__side">
+            <div class="footer__button button button--footer">
+                <a class="footer__link" href="#">
+                    Achetez votre<br>ticket
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

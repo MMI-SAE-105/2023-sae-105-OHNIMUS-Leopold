@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Delaroche</title>
+    <link rel="stylesheet" href="../../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <p class="header__title">
+            <a class="header__link" href="./../index.html">
+                ACADEM'ART
+            </a>
+        </p>
+        <a class="header__link--img" href="#">
+            <img class="header__shop" src="../../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+        </a>
+
+
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen">
+                <img class="menu__icon" src="../../public/icons/menu_black.svg" alt="ouvrir menu">
+            </button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-transition.duration.500ms>
+                
+                <div class="menu__header">
+                    <div class="menu__sec1">
+                        <a class="menu__lang--link" href="#">
+                            <img class="menu__lang" src="../../public/icons/globe.svg" alt="changer de langue">
+                        </a>
+                    </div>
+                    <div class="menu__sec2">
+                        <a class="menu__shop--link" href="#">
+                            <img class="menu__shop" src="../../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+                        </a>
+                        <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen">
+                            <img class="menu__close" src="../../public/icons/cross_black.svg" alt="fermer menu">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu__list">
+                    <nav class="menu__nav">
+                        <ul class="menu__leselements">
+                            <li class="menu__element">
+                                <a class="menu__link" href="#">
+                                    Acheter une entrée
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../lesartistes.html">
+                                    Les artistes mis à l'honneur
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../lesoeuvres.html">
+                                    Les œuvres majeures de l'exposition
+                                    et leur chronologie
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../about.html">
+                                    À propos de l'exposition
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../contact.html">
+                                    Informations pratiques / Contact
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../fondation.html">
+                                    La Fondation Cartier
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="fiche fiche--artiste artiste">
+        <article class="artiste__article">
+            
+            <div class="artiste__part artiste__part--1">
+                <h1 class="artiste__title">
+                    Paul Delaroche
+                </h1>
+                <div class="artiste__line"></div>
+                <h2 class="artiste__subtitle">
+                    Sa vie
+                </h2>
+                <h3 class="artiste__subsubtitle">
+                    Introduction
+                </h3>
+                <div class="artiste__grille">
+                    <p class="artiste__text">
+                        Paul Delaroche était un peintre français né 
+                        en 1797 à Paris. Il est connu pour ses 
+                        tableaux historiques romantiques qui ont 
+                        exercé une grande influence sur les peintres 
+                        de son époque.
+                    </p>
+                    <figure class="artiste__face">
+                        <img class="artiste__img artiste__img--face" src="./../../public/img/artistes/delarocheportrait.webp" alt="Paul Delaroche">
+                        <figcaption class="artiste__caption">
+                            Paul Delaroche
+                        </figcaption>
+                    </figure>
+                </div>
+                <p class="artiste__text">
+                    Il a étudié à l'École des Beaux-Arts de Paris 
+                    sous la direction de Pierre-Narcisse Guérin, 
+                    et a remporté le premier grand prix de Rome en 
+                    1822 pour son tableau "Hémicycle central de 
+                    l'école des Beaux-Arts".
+                </p>
+                <h3 class="artiste__subsubtitle">
+                    Sa carrière
+                </h3>
+                <p class="artiste__text">
+                    Au cours de sa carrière, Delaroche a peint de 
+                    nombreux tableaux historiques et religieux, mais 
+                    il est surtout connu pour ses œuvres qui traitent 
+                    des événements historiques tels que la mort de 
+                    Charles Ier d'Angleterre, la mort de Henri IV et 
+                    la mort de la reine Marie-Antoinette.
+                    <br>
+                    Ses tableaux étaient souvent caractérisés par une 
+                    grande attention aux détails historiques et par 
+                    une palette de couleurs sombres. Il a également 
+                    été un enseignant influent à l'École des 
+                    Beaux-Arts de Paris, où il a enseigné à de 
+                    nombreux artistes qui sont devenus célèbres par 
+                    la suite.
+                </p>
+                <h3 class="artiste__subsubtitle">
+                    L'influence qu'il a eu
+                </h3>
+                <p class="artiste__text">
+                    L'influence de Delaroche a été considérable dans 
+                    le développement de l'histoire de la peinture en 
+                    France au 19ème siècle. Ses œuvres ont eu une 
+                    influence directe sur les peintres de l'école de 
+                    Barbizon et sur les peintres historiques tels 
+                    que Meissonier et Gérôme.
+                    <br>
+                    Il a également contribué à populariser le style 
+                    néoclassique en France. Plusieurs de ses tableaux 
+                    sont encore exposées dans les principaux musées 
+                    de France ainsi que dans les musées du monde entier.
+                </p>
+            </div>
+
+            <div class="artiste__part artiste__part--2">
+                <h2 class="artiste__subtitle">
+                    Ses œuvres exposées
+                </h2>
+
+                <figure class="artiste__art">
+                    <img class="artiste__img artiste__img--art" src="../../public/img/oeuvres/portrait-of-henrietta-sontag.webp" alt="Portrait of Henrietta Sontag">
+                    <div class="artiste__sub">
+                        <figcaption class="artiste__caption">
+                            Portrait of Henrietta Sontag
+                        </figcaption>
+                        <a class="artiste__link" href="../arts/henriettasontag.html">
+                            <img class="artiste__icon" src="../../public/icons/arrow-right.svg" alt="aller à l'oeuvre">
+                        </a>
+                    </div>
+                </figure>
+
+                <figure class="artiste__art">
+                    <img class="artiste__img artiste__img--art" src="../../public/img/oeuvres/temptation-of-saint-anthony.webp" alt="The Temptation of Saint Anthony">
+                    <div class="artiste__sub">
+                        <figcaption class="artiste__caption">
+                            The Temptation of Saint Anthony
+                        </figcaption>
+                        <a class="artiste__link" href="../arts/temptation.html">
+                            <img class="artiste__icon" src="../../public/icons/arrow-right.svg" alt="aller à l'oeuvre">
+                        </a>
+                    </div>
+                </figure>
+            </div>
+            
+        </article>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer__list">
+            <nav class="footer__nav">
+                <ul class="footer__leselements">
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../about.html">
+                            À propos de l'exposition
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../contact.html">
+                            Informations pratiques
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../fondation.html">
+                            La Fondation Cartier
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__side">
+            <div class="footer__button button button--footer">
+                <a class="footer__link" href="#">
+                    Achetez votre<br>ticket
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

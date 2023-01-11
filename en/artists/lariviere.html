@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles-Philippe Larivière</title>
+    <link rel="stylesheet" href="../../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <p class="header__title">
+            <a class="header__link" href="./../index.html">
+                ACADEM'ART
+            </a>
+        </p>
+        <a class="header__link--img" href="#">
+            <img class="header__shop" src="../../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+        </a>
+
+
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen">
+                <img class="menu__icon" src="../../public/icons/menu_black.svg" alt="ouvrir menu">
+            </button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-transition.duration.500ms>
+                
+                <div class="menu__header">
+                    <div class="menu__sec1">
+                        <a class="menu__lang--link" href="#">
+                            <img class="menu__lang" src="../../public/icons/globe.svg" alt="changer de langue">
+                        </a>
+                    </div>
+                    <div class="menu__sec2">
+                        <a class="menu__shop--link" href="#">
+                            <img class="menu__shop" src="../../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+                        </a>
+                        <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen">
+                            <img class="menu__close" src="../../public/icons/cross_black.svg" alt="fermer menu">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu__list">
+                    <nav class="menu__nav">
+                        <ul class="menu__leselements">
+                            <li class="menu__element">
+                                <a class="menu__link" href="#">
+                                    Acheter une entrée
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../lesartistes.html">
+                                    Les artistes mis à l'honneur
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../lesoeuvres.html">
+                                    Les œuvres majeures de l'exposition
+                                    et leur chronologie
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../about.html">
+                                    À propos de l'exposition
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../contact.html">
+                                    Informations pratiques / Contact
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./../fondation.html">
+                                    La Fondation Cartier
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="fiche fiche--artiste artiste">
+        <article class="artiste__article">
+            
+            <div class="artiste__part artiste__part--1">
+                <h1 class="artiste__title">
+                    Charles-Philippe Larivière
+                </h1>
+                <div class="artiste__line"></div>
+                <h2 class="artiste__subtitle">
+                    Sa vie
+                </h2>
+                <h3 class="artiste__subsubtitle">
+                    Sa famille
+                </h3>
+                <div class="artiste__grille">
+                    <p class="artiste__text">
+                        Charles-Philippe Larivière est le petit-fils 
+                        du peintre Charles Lepeintre (1735-1803), et 
+                        le beau-père du peintre Albert Maignan, 
+                        époux de sa fille Étiennette, elle-même 
+                        pastelliste et portraitiste. 
+                    </p>
+                    <figure class="artiste__face">
+                        <img class="artiste__img artiste__img--face" src="./../../public/img/artistes/charles-philippe-lariviere.webp" alt="Charles-Philippe Larivière">
+                        <figcaption class="artiste__caption">
+                            Charles-Philippe Larivière
+                        </figcaption>
+                    </figure>
+                </div>
+                <p class="artiste__text">
+                    Son frère, 
+                    Louis-Eugène Larivière (vers 1801-1823), 
+                    est également peintre.
+                </p>
+                <h3 class="artiste__subsubtitle">
+                    Sa formation
+                </h3>
+                <p class="artiste__text">
+                    Élève de Paulin Guérin, de Girodet et de Gros, 
+                    Charles-Philippe Larivière est admis à l'École 
+                    des beaux-arts de Paris en 1813. Il obtient le 
+                    second prix de Rome en 1819 puis une médaille 
+                    d'encouragement en 1820. 
+                    <br>
+                    En 1824, sa 
+                    composition sur le sujet de La Mort d'Alcibiade 
+                    lui permet de remporter le grand prix de Rome, 
+                    grâce auquel il séjourne à la villa Medicis 
+                    jusqu'en 1830.
+                </p>
+                <h3 class="artiste__subsubtitle">
+                    Carrière artistique
+                </h3>
+                <p class="artiste__text">
+                    Réceptif à la sensibilité de l'école romantique, 
+                    mais formé à la discipline de la peinture 
+                    néoclassique, cet artiste officiel reconnu se 
+                    spécialise dans la peinture d'histoire. 
+                    Il expose pour la première fois au Salon de 
+                    1827 et y obtient des médailles à deux reprises 
+                    en 1831 et 1855. Charles-Philippe Larivière 
+                    bénéficie d'importantes commandes publiques et 
+                    reçoit les insignes de chevalier de la Légion 
+                    d'honneur en 1836. Il obtient aussi l'ordre 
+                    tunisien du Nichan Iftikhar.
+                    <br><br>
+                    On lui doit de nombreux tableaux de batailles 
+                    et d'événements publics, des portraits de 
+                    personnalités, ainsi que des toiles 
+                    d'inspiration religieuse. Il est l'auteur de 
+                    trois des œuvres de la galerie des Batailles 
+                    du château de Versailles.
+                </p>
+            </div>
+
+            <div class="artiste__part artiste__part--2">
+                <h2 class="artiste__subtitle">
+                    Ses œuvres exposées
+                </h2>
+
+                <figure class="artiste__art">
+                    <img class="artiste__img artiste__img--art" src="../../public/img/oeuvres/dode-de-la-brunerie.webp" alt="Dode De La Brunerie">
+                    <div class="artiste__sub">
+                        <figcaption class="artiste__caption">
+                            Dode De La Brunerie
+                        </figcaption>
+                        <a class="artiste__link" href="../arts/dode.html">
+                            <img class="artiste__icon" src="../../public/icons/arrow-right.svg" alt="aller à l'oeuvre">
+                        </a>
+                    </div>
+                </figure>
+
+                <figure class="artiste__art">
+                    <img class="artiste__img artiste__img--art" src="../../public/img/oeuvres/sebastien-le-prestre-de-vauban.webp" alt="Sebastien Le Prestre De Vauban">
+                    <div class="artiste__sub">
+                        <figcaption class="artiste__caption">
+                            Sebastien Le Prestre De Vauban
+                        </figcaption>
+                        <a class="artiste__link" href="../arts/sebastien.html">
+                            <img class="artiste__icon" src="../../public/icons/arrow-right.svg" alt="aller à l'oeuvre">
+                        </a>
+                    </div>
+                </figure>
+            </div>
+            
+        </article>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer__list">
+            <nav class="footer__nav">
+                <ul class="footer__leselements">
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../about.html">
+                            À propos de l'exposition
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../contact.html">
+                            Informations pratiques
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./../fondation.html">
+                            La Fondation Cartier
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__side">
+            <div class="footer__button button button--footer">
+                <a class="footer__link" href="#">
+                    Achetez votre<br>ticket
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
