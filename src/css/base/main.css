@@ -41,6 +41,19 @@ html {
     margin-right: 20px;
 }
 
+.page__subtitle {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.page__map {
+    display: block;
+    margin: auto;
+    filter: drop-shadow(var(--shadow));
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
 .page__line {
     content: '';
     height: 2px;

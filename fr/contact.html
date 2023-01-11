@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information pratiques / Contact</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+    
+    <header class="header">
+        <p class="header__title">
+            <a class="header__link" href="./index.html">
+                ACADEM'ART
+            </a>
+        </p>
+        <a class="header__link--img" href="#">
+            <img class="header__shop" src="../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+        </a>
+
+
+        <div class="header__menu menu">
+            <button aria-controls="mainMenu" class="menu__icon--button" @click="menuIsOpen = ! menuIsOpen">
+                <img class="menu__icon" src="../public/icons/menu_black.svg" alt="ouvrir menu">
+            </button>
+            
+            <div id="mainMenu" class="menu__open" x-show="menuIsOpen" x-transition.duration.500ms>
+                
+                <div class="menu__header">
+                    <div class="menu__sec1">
+                        <a class="menu__lang--link" href="#">
+                            <img class="menu__lang" src="../public/icons/globe.svg" alt="changer de langue">
+                        </a>
+                    </div>
+                    <div class="menu__sec2">
+                        <a class="menu__shop--link" href="#">
+                            <img class="menu__shop" src="../public/icons/shopping-cart-black.svg" alt="acheter un ticket">
+                        </a>
+                        <button aria-controls="mainMenu" class="menu__close--button" @click="menuIsOpen = ! menuIsOpen">
+                            <img class="menu__close" src="../public/icons/cross_black.svg" alt="fermer menu">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu__list">
+                    <nav class="menu__nav">
+                        <ul class="menu__leselements">
+                            <li class="menu__element">
+                                <a class="menu__link" href="#">
+                                    Acheter une entrée
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./lesartistes.html">
+                                    Les artistes mis à l'honneur
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./lesoeuvres.html">
+                                    Les œuvres majeures de l'exposition
+                                    et leur chronologie
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./about.html">
+                                    À propos de l'exposition
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./contact.html">
+                                    Informations pratiques / Contact
+                                </a>
+                            </li>
+                            <hr class="menu__separator">
+                            <li class="menu__element">
+                                <a class="menu__link" href="./fondation.html">
+                                    La Fondation Cartier
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1 class="page__title">
+            Informations pratiques
+        </h1>
+        <div class="page__line"></div>
+        <h2 class="page__subtitle">
+            Se rendre à l'exposition
+        </h2>
+        <iframe class="page__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.0966455014363!2d2.3293401761273005!3d48.837295202191235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671c80c12b47d%3A0x225ddbf564cf5d5a!2sFondation%20Cartier%20pour%20l&#39;art%20contemporain!5e0!3m2!1sfr!2sfr!4v1673440577908!5m2!1sfr!2sfr" width="280" height="190" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer__list">
+            <nav class="footer__nav">
+                <ul class="footer__leselements">
+                    <li class="footer__element">
+                        <a class="footer__link" href="./about.html">
+                            À propos de l'exposition
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./contact.html">
+                            Informations pratiques
+                        </a>
+                    </li>
+                    <li class="footer__element">
+                        <a class="footer__link" href="./fondation.html">
+                            La Fondation Cartier
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__side">
+            <div class="footer__button button button--footer">
+                <a class="footer__link" href="#">
+                    Achetez votre<br>ticket
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
