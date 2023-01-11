@@ -1,0 +1,6 @@
+[ 
+        {"tarif":"Plein tarif", "prix":"11€"}, 
+        {"tarif":"Tarif réduit", "prix":"7,50€"}, 
+        {"tarif":"Réduction 13 - 25ans", "prix":"5€"}, 
+        {"tarif":"Fondation Cartier Pass", "prix":"18€ - 50€"}
+    ]
