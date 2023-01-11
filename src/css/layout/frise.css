@@ -1,0 +1,72 @@
+.frise {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin: -10px 30px 10px 30px;
+}
+
+.frise__col {
+    text-align: center;
+}
+
+.frise__col--1 {
+    grid-column: span 1 / span 1;
+}
+
+.frise__col--2 {
+    grid-column: span 2 / span 2;
+}
+
+.frise__col--3 {
+    grid-column: span 2 / span 2;
+    display: grid;
+    place-content: end;
+}
+
+.frise__box {
+    /* width: 26%; */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* .frise__box--date {
+    
+} */
+
+/* .frise__box--name {
+    
+} */
+
+/* .frise__box--img {
+    padding-left: 20px;
+} */
+
+.frise__date {
+    font-family: var(--sans-serif);
+    font-size: var(--button);
+    font-weight: var(--semi-bold);
+    color: var(--orange);
+    margin: 0;
+}
+
+.frise__name {
+    font-family: var(--sans-serif);
+    font-size: var(--small-text);
+    font-weight: var(--regular);
+    color: var(--black);
+    margin: 0;
+}
+
+/* .frise__link {
+
+} */
+
+.frise__img {
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 100px;
+    border: 2px solid var(--black);
+}
